@@ -1,0 +1,41 @@
+h1 {
+    letter-spacing: 4.5px;
+    font-size: 40px;
+    color: #FDC13D;
+    font-family: Roboto,sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 22px auto;
+}
+hr {
+    border-top: 6px solid #cb972b;
+    box-sizing: border-box;
+    width: 9%;
+    margin: 10px auto;
+    margin-bottom: 0px;
+}
+.w-text {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+.y-text {
+    font-size: 25px;
+    color: #cb972b;
+    text-align: center;
+}
+
+.contact-us-fields {
+        padding: 10px 5px 10px 0px;
+        border: none;
+        border-bottom: 1px solid #000;
+        color: #000000;
+        margin: 0 0 5px;
+        width: 100%;
+        -webkit-transition: 0.5s ease all;
+        transition: 0.5s ease all;
+        background-color: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        border-radius: 0;
+}

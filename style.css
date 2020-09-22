@@ -1,0 +1,305 @@
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0; background-color: black;}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.carousel-inner img {
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 300px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/*sticky header*/
+
+.header {
+  background-color: black;
+  color: white;
+  z-index: 10000;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+  body.offcanvas-active{
+    overflow:hidden;
+  }
+  .offcanvas-header{ display:none; }
+  
+  @media (max-width: 992px) {
+    .offcanvas-header{ display:block; }
+    .navbar-collapse {
+      position: fixed;
+      top:0; 
+      bottom: 0;
+      left: 100%;
+      width: 100%;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      overflow-y: auto;
+      z-index: 50000;
+      visibility: hidden;
+      background-color: black;
+      transition: visibility .2s ease-in-out, transform .2s ease-in-out;
+    }
+    .navbar-collapse.show {
+      visibility: visible;
+      z-index: 50000;
+      transform: translateX(-100%);
+    }
+  }
+
+
+  /*center peine*/
+  .img-block {
+    text-align: center;
+}
+
+.home-grid-banners {
+  margin-top: 20px;
+}
+
+.title {
+  color: #FDC13D;
+  font-weight: normal;
+  font-size: 36px;
+  text-transform: capitalize;
+  margin-bottom: 12px;
+  text-align: center;
+  font-family: DancingScript;
+}
+.sub-title {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: white;
+}
+.new_wrapper {
+  padding-bottom: 3px;
+  padding-top: 16px;
+}
+.img {
+  max-width: 205px;
+  margin: 0 auto;
+}
+
+.img-pad {
+  padding: 1.5em;
+}
+ul > li {
+  display: inline-block;
+  /* You can also add some margins here to make it look prettier */
+  zoom:1;
+  *display:inline;
+  color: whitesmoke;
+  /* this fix is needed for IE7- */
+}
+#footer{
+  display: block;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+#footer ul li a {
+  color: var(--footer_text_color);
+}
+
+#footer li{
+  display: inline;
+  padding: 0 10px;
+  border-left: solid 1px white;
+}
+#footer li:first-child{
+  border-left: none;
+}
+
+
+.center-content{
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+.copyright-content {
+  background: yellow;
+  height: auto;
+  margin-top: auto;
+  vertical-align: middle;
+}
+.media {
+  max-width: 100%;
+  height: auto;
+}
+
+/*waves animation */
+.img-overlay-wrap {
+  position: relative;
+  display: inline-block; /* <= shrinks container to image size */
+  transition: transform 150ms ease-in-out;
+}
+
+.img-overlay-wrap img { /* <= optional, for responsiveness */
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+
+.img-overlay-wrap svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+/* Animation */
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+.nav-link-active{
+  color: white;
+  border-bottom: 1px solid #FDC13D;
+}
